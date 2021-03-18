@@ -42,7 +42,9 @@ def sqrt(x,y):
     return XtimesY(y, 1/x)
 
 def calculate(x):
-    return exponent(x)*XtimesY(7, x)*XtimesY(x, -1)*sqrt(x,x)
+    if x<=0:
+        return 0.0
+    else:
+        return exponent(x)*XtimesY(7, x)*XtimesY(x, -1)*sqrt(x,x)
     
-print (calculate(0))
 
